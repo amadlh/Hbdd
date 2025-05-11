@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Nelsa Septiaminda</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, #000000, #001f3f);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      align: center;
+      color: #00bfff;
+      text-shadow: 0 0 20px #00bfff, 0 0 40px #008cba;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ffffffaa;
+      margin-top: 10px;
+      animation: fadeIn 4s ease-in-out;
+      font-family: Playwrite DK Loopet , sans-serif ;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00bfff, 0 0 20px #0077be;
+      }
+      to {
+        text-shadow: 0 0 30px #00bfff, 0 0 60px #0077be;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 60px;
+      background: #00bfff;
+      border-radius: 50% 50% 45% 45%;
+      animation: float 8s infinite ease-in-out;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: white;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-100vh) translateX(50px) rotate(360deg); opacity: 0; }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      background: #00bfff;
+      animation: confetti-fall 5s infinite;
+      z-index: 0;
+    }
+
+    @keyframes confetti-fall {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Nelsa Septiaminda 🌸!</h1>
+    <h2>Sweetseventeen yaww saa, semoga panjang umur dan dipermudah 
+        dalam segala urusan. harapan gw yang terbaik untukmuu. Jaga kesehatannya yaa cantikk, jangan sedihh teruss. ceritaa yaa
+        kaloo muu butuh someone to talk, telp gw jam 3 pagi juga hayuu💙🌷</h2>
+  </div>
+
+  <script>
+    // Balloons
+    for (let i = 0; i < 15; i++) {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.animationDuration = (6 + Math.random() * 4) + 's';
+      document.body.appendChild(balloon);
+    }
+
+    // Confetti
+    for (let i = 0; i < 100; i++) {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = Math.random() * -100 + 'px';
+      confetti.style.backgroundColor = Math.random() > 0.5 ? '#00bfff' : '#0077be';
+      confetti.style.animationDuration = (3 + Math.random() * 2) + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
+
+csss
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
